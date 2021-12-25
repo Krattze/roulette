@@ -1,6 +1,7 @@
 var currentNum = 0;
 
 $(document).ready(function () {
+
     $("#betButtons .btn").click(function (e) {
         e.preventDefault();
         var betAmount = $('#betAmount').val();

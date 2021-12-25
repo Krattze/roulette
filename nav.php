@@ -60,3 +60,24 @@ if ($loggedin) {
 		</nav>
 	</header>';
 }
+
+if(isset($_GET['signupsuccess']) && $_GET['signupsuccess']=="true") {
+    echo '<div class="container" ><div class="row" style="width: 90%;"><div id="my-alert" class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Success!</strong> You can now login.
+          </div></div></div>';
+  }
+  if(isset($_GET['error']) && $_GET['signupsuccess']=="false") {
+    echo '<div class="container"><div class="row" style="width: 90%;"><div id="my-alert" class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Warning!</strong> ' .$_GET['error']. '
+          </div></div></div>';
+  }
+  if(isset($_GET['loginsuccess']) && $_GET['loginsuccess']=="true"){
+    echo '<div class="container"><div class="row" style="width: 90%;"><div id="my-alert" class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Success!</strong> You are logged in
+          </div></div></div>';
+  }
+  if(isset($_GET['loginsuccess']) && $_GET['loginsuccess']=="false"){
+    echo '<div class="container" style="width: 90%;"><div class="row" style="width: 90%;"><div id="my-alert" class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Warning!</strong> Invalid Credentials
+            </div></div></div>';
+  }
